@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <Container>
-        <h1 className='fuck-you'>Вирішальная подія 18 року прибила нашого мера гомера до треби</h1>
+        <h1 className="fuck-you">Вирішала гомера до треби</h1>
       </Container>
     </section>
   );
