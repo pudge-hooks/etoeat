@@ -1,16 +1,16 @@
 .category-card {
   position: relative;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
 
-  &::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
-  pointer-events: none;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
   }
 }
 
@@ -30,7 +30,7 @@
   align-items: center;
   gap: 2rem;
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     gap: 1.5rem;
   }
 }
