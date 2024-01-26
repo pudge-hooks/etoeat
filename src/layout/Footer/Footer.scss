@@ -1,0 +1,28 @@
+.footer{
+  background-color: var(--gray);
+  padding: 10px 0;
+  font-family: 'Exo 2';
+  color: var(--white);
+}
+
+.footer__container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__logo{
+  width: 100px;
+}
+
+.footer__title{
+  text-align: center;
+}
+
+.footer__order-number{
+  font-size: 25px;
+}
+
+.footer__release{
+  font-size: 20px;
+}
