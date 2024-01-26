@@ -1,0 +1,20 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__icon {
+  width: 64px;
+  height: 64px;
+
+  @media screen and (max-width: 1024px) {
+    width: 58px;
+    height: 58px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 54px;
+    height: 54px;
+  }
+}
