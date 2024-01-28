@@ -34,7 +34,6 @@ const Header = ({ setIsBurgerOpen }) => {
           <button
             className="header__menu-btn"
             onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
           >
             МЕНЮ
           </button>
@@ -49,7 +48,6 @@ const Header = ({ setIsBurgerOpen }) => {
       <div className={`header__menu-container ${isHovered ? 'show' : ''}`}>
         <div className="header__menu-backdrop"></div>
         <div
-          onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className={`header__menu-content ${isHovered ? 'slide-in' : 'slide-out'}`}
         >
