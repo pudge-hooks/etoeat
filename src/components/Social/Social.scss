@@ -4,5 +4,10 @@
 
   img{
     width: 40px;
+    transition: 200ms;
+
+    &:hover{
+      transform: scale(1.2);
+    }
   }
 }
