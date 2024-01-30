@@ -1,5 +1,5 @@
 .footer{
-  background-color: var(--gray);
+  background-color: var(--accent);
   padding: 10px 0;
   font-family: 'Exo 2';
   color: var(--white);
@@ -9,10 +9,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 20px;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
 .footer__logo{
-  width: 100px;
+  width: 50px;
 }
 
 .footer__title{
@@ -20,9 +25,10 @@
 }
 
 .footer__order-number{
-  font-size: 25px;
+  font-size: 20px;
+  color: var(--white);
 }
 
 .footer__release{
-  font-size: 20px;
+  font-size: 18px;
 }
