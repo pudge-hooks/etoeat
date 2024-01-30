@@ -7,7 +7,10 @@ const Categories = () => {
     <section className="categories">
       <ul className="categories__list">
         {categories.map(category => {
-          return <CategoryCard category={category} key={category.id} />;
+          const link = `/${category.id}`;
+          return (
+            <CategoryCard category={category} key={category.id} link={link} />
+          );
         })}
       </ul>
     </section>

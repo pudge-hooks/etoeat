@@ -10,7 +10,7 @@
   background-color: #000000a3;
   transition:
     opacity 300ms ease,
-    visibility 300ms;
+    visibility 300ms ease;
 
   &.open {
     opacity: 1;

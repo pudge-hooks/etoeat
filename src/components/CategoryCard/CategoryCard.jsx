@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom';
+
 import Container from '../Container/Container';
+
 import './CategoryCard.scss';
 
-const CategoryCard = ({ category }) => {
+const CategoryCard = ({ category, link }) => {
   return (
     <li className="category-card">
       <img
@@ -11,7 +14,7 @@ const CategoryCard = ({ category }) => {
       />
       <Container className="category-card__container">
         <h2 className="category-card__title">{category.name}</h2>
-        <button className="category-card__button">Перейти до страв</button>
+        <Link to={link} className="category-card__button">Обрати категорію →</Link>
       </Container>
     </li>
   );

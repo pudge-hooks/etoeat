@@ -46,6 +46,11 @@
   line-height: normal;
   display: inline-block;
   z-index: 1;
+  transition: text-shadow 300ms ease;
+
+  &:hover {
+    text-shadow: var(--white) 1px 0 10px;
+  }
 
   @media screen and (max-width: 1024px) {
     display: none;

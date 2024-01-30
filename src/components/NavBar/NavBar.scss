@@ -58,6 +58,11 @@
   font-size: 22px;
   color: var(--white);
   line-height: normal;
+  transition: text-shadow 300ms ease;
+
+  &:hover {
+    text-shadow: var(--white) 1px 0 10px;
+  }
 
   @media screen and (max-width: 1024px) {
     font-size: 26px;
