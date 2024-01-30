@@ -9,10 +9,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  
 
   @media screen and (max-width: 480px) {
     flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -27,8 +28,17 @@
 .footer__order-number{
   font-size: 20px;
   color: var(--white);
+  text-align: center;
 }
 
 .footer__release{
   font-size: 18px;
+
+  @media screen and (max-width: 850px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 480px) {
+    display: block;
+  }
 }
