@@ -4,17 +4,32 @@
   align-items: center;
 }
 
+// .logo__icon {
+//   width: 64px;
+//   height: 64px;
+
+//   @media screen and (max-width: 1024px) {
+//     width: 58px;
+//     height: 58px;
+//   }
+
+//   @media screen and (max-width: 480px) {
+//     width: 54px;
+//     height: 54px;
+//   }
+// }
+
 .logo__icon {
-  width: 64px;
-  height: 64px;
+  width: 70.1px;
+  height: 79.9px;
 
   @media screen and (max-width: 1024px) {
-    width: 58px;
-    height: 58px;
+    width: 58.4px;
+    height: 66.6px;
   }
 
   @media screen and (max-width: 480px) {
-    width: 54px;
-    height: 54px;
+    width: 53.9px;
+    height: 61.5px;
   }
 }

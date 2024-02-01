@@ -6,16 +6,16 @@ import './Social.scss';
 const Social = () => {
   return (
     <div className="social">
-      <p>Ми в соцмережах</p>
-      <div className='social__container'>
-        <a href="#">
-          <img src={Instagram} alt='instagram'/>
+      <p className="social__subtitle">Ми в соцмережах</p>
+      <div className="social__container">
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+          <img src={Instagram} alt="instagram" />
         </a>
-        <a href="#">
-          <img src={Telegram} alt='telegram'/>
+        <a href="https://telegram.org/" target="_blank" rel="noreferrer">
+          <img src={Telegram} alt="telegram" />
         </a>
-        <a href="#">
-          <img src={Facebook} alt='facebook'/>
+        <a href="https://uk-ua.facebook.com/" target="_blank" rel="noreferrer">
+          <img src={Facebook} alt="facebook" />
         </a>
       </div>
     </div>

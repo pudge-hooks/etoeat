@@ -1,13 +1,17 @@
-.social__container{
+.social__container {
   display: flex;
   gap: 10px;
 
-  img{
+  img {
     width: 40px;
     transition: 200ms;
 
-    &:hover{
+    &:hover {
       transform: scale(1.2);
     }
   }
+}
+
+.social__subtitle {
+  margin-bottom: 10px;
 }

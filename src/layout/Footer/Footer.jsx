@@ -12,7 +12,7 @@ const Footer = () => {
          className='footer__order-number'
          href='tel:+380630000000'
         >
-         Замовити: +380630000000
+         Замовити: +380 98 000 00 00
         </a>
         <Social/>
         <p className='footer__release'>@2024 Усі права захищено</p>

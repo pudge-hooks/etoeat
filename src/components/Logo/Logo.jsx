@@ -2,16 +2,19 @@ import './Logo.scss';
 
 import { Link } from 'react-router-dom';
 
-import { logo } from '../../utils/icons';
+// import { logo } from '../../utils/icons';
+
+import logo from '../../assets/img/logo.png';
 
 const Logo = ({ setIsBurgerOpen, iconClassName = '' }) => {
   return (
     <Link
       to="/"
       onClick={() => (setIsBurgerOpen ? setIsBurgerOpen(false) : null)}
-      className='logo'
+      className="logo"
     >
-      <svg
+      <img src={logo} alt="логотип" className="logo__icon" />
+      {/* <svg
         className={`logo__icon ${iconClassName}`}
         width="48"
         height="48"
@@ -20,7 +23,7 @@ const Logo = ({ setIsBurgerOpen, iconClassName = '' }) => {
         xmlns="http://www.w3.org/2000/svg"
       >
         {logo}
-      </svg>
+      </svg> */}
     </Link>
   );
 };
