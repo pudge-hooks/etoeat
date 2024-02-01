@@ -7,6 +7,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: 'EbbABY',
@@ -16,6 +17,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: 'uOntAK',
@@ -25,6 +27,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: 'TFyd1X',
@@ -34,6 +37,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: 'B5pP5Q',
@@ -43,6 +47,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: 'tGpyx2',
@@ -52,6 +57,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: 'ciBLkx',
@@ -61,6 +67,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: 'W6EVpT',
@@ -70,6 +77,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: '3R9UeF',
@@ -79,6 +87,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
   {
     id: 'YE09KE',
@@ -88,6 +97,7 @@ const products = [
     weight: 300,
     price: 120,
     img: 'https://daba.rest/wp-content/uploads/2024/01/IMG_0418-scaled-e1706007582734.jpeg',
+    count: 1
   },
 ];
 

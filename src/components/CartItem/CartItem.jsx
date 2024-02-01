@@ -5,17 +5,25 @@ import Minus from '../../assets/svg/minus.svg';
 import './CartItem.scss';
 import { useState } from "react";
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, calculateTotalAmount, cartProducts }) => {
   const { removeFromCart } = useCart();
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const handlePlus = () => {
-    count<99 ? setCount(prev => prev + 1) : setCount(count);
+    if(count<99){
+      item.count = item.count + 1;
+      setCount(item.count);
+      calculateTotalAmount(cartProducts);
+    }
   }
 
   const handleMinus = () => {
-    count>0 ? setCount(prev => prev - 1): setCount(count);
+    if(count>1){
+      item.count = item.count - 1;
+      setCount(item.count);
+      calculateTotalAmount(cartProducts);
+    }
   }
 
   return (

@@ -32,18 +32,18 @@ const Header = ({ setIsBurgerOpen, setCartModalOpen }) => {
             setIsBurgerOpen={setIsBurgerOpen}
             iconClassName="header__logo"
           />
-          <button
-            onClick={() => setCartModalOpen(true)}
-          >
-            <img className='header__cart-icon' src={CartIcon} alt='cart-icon'/>
-          </button>
-          <button
-            className="header__menu-btn"
-            onMouseEnter={() => setIsHovered(true)}
-            onClick={() => setIsHovered(prev => !prev)}
-          >
-            МЕНЮ
-          </button>
+            <button
+              onClick={() => setCartModalOpen(true)}
+            >
+              <img className='header__cart-icon' src={CartIcon} alt='cart-icon'/>
+            </button>
+            <button
+              className="header__menu-btn"
+              onMouseEnter={() => setIsHovered(true)}
+              onClick={() => setIsHovered(prev => !prev)}
+            >
+              МЕНЮ
+            </button>
         </div>
         <button
           onClick={() => setIsBurgerOpen(true)}
