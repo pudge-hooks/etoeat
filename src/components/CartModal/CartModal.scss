@@ -69,28 +69,27 @@
   }
 }
 
-.open {
-  animation: scaleInAnimation 1s ease-in-out;
+.open-modal {
+  animation: scaleInAnimation 400ms ease-in-out;
 }
 
-.close {
-  animation: scaleOutAnimation 1s ease-in-out;
+.empty{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes scaleInAnimation {
   0% {
-    transform: scale(0);
+    transform: rotate(0);
+  }
+  35% {
+    transform: rotate(10deg);
+  }
+  70%{
+    transform: rotate(-10deg);
   }
   100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes scaleOutAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
+    transform: rotate(0);
   }
 }

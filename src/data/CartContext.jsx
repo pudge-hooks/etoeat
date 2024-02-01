@@ -8,6 +8,8 @@ export const CartProvider = ({ children }) => {
     return storedCartItems ? JSON.parse(storedCartItems) : [];
   });
 
+  const [totalAmount, setTotalAmount] = useState(0);
+
   const addToCart = (item) => {
     setCartItems((prevItems) => {
       const updatedCart = [...prevItems, item];
@@ -24,8 +26,18 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const calculateTotalAmount = (cartProducts) => {
+    if(cartProducts){
+      let summ = 0;
+      for(let product of cartProducts){
+        summ = summ + (product.price*product.count);
+      }
+      setTotalAmount(summ);
+    }
+  }
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, totalAmount, calculateTotalAmount }}>
       {children}
     </CartContext.Provider>
   );
