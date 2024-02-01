@@ -2,7 +2,14 @@ import './Products.scss';
 
 import Container from '../../components/Container/Container';
 
+import { useCart } from '../../data/CartContext';
+
 const Products = ({ productsArray }) => {
+
+  const { addToCart } = useCart();
+
+  const handleAddToCart = productId => addToCart(productId);
+
   return (
     <section className="products">
       <ul className="products__list">
@@ -21,7 +28,10 @@ const Products = ({ productsArray }) => {
                   </div>
                   <div className="products__price-weight">
                     <span className="products__span">к-сть: - 1 +</span>
-                    <button className="products__button">
+                    <button 
+                      className="products__button"
+                      onClick={() => handleAddToCart(id)}
+                    >
                       Додати до замовлення
                     </button>
                   </div>

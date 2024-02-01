@@ -135,6 +135,15 @@
   }
 }
 
+.header__cart-icon{
+  width: 30px;
+  transition: 0.2s;
+  
+  &:hover{
+    transform: scale(1.2);
+  }
+}
+
 .header__burger-btn {
   display: none;
 

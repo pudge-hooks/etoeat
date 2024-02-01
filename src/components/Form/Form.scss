@@ -1,0 +1,19 @@
+.form__container{
+  display: flex;
+  flex-direction: column;
+}
+
+.form__button{
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px white solid;
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 3px 1px rgba(170, 170, 170, 1);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.36);
+  }
+}

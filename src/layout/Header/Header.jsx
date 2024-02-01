@@ -6,9 +6,10 @@ import Container from '../../components/Container/Container';
 import NavBar from '../../components/NavBar/NavBar';
 import Logo from '../../components/Logo/Logo';
 
+import CartIcon from '../../assets/svg/cart.svg';
 import menu from '../../assets/svg/burger-menu.svg';
 
-const Header = ({ setIsBurgerOpen }) => {
+const Header = ({ setIsBurgerOpen, setCartModalOpen }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -31,6 +32,11 @@ const Header = ({ setIsBurgerOpen }) => {
             setIsBurgerOpen={setIsBurgerOpen}
             iconClassName="header__logo"
           />
+          <button
+            onClick={() => setCartModalOpen(true)}
+          >
+            <img className='header__cart-icon' src={CartIcon} alt='cart-icon'/>
+          </button>
           <button
             className="header__menu-btn"
             onMouseEnter={() => setIsHovered(true)}
