@@ -3,6 +3,7 @@ import './Products.scss';
 import Container from '../../components/Container/Container';
 
 import { useState } from 'react';
+import { useCart } from '../../data/CartContext';
 
 const Products = ({ productsArray }) => {
   const [selectedProducts, setSelectedProducts] = useState({});
@@ -13,6 +14,10 @@ const Products = ({ productsArray }) => {
       [productId]: isSelected,
     }));
   };
+
+  const { addToCart } = useCart();
+
+  const handleAddToCart = productId => addToCart(productId);
 
   return (
     <section className="products">
@@ -53,7 +58,10 @@ const Products = ({ productsArray }) => {
                       </div>
                       <button
                         className="products__button"
-                        onClick={() => handleProductSelect(id, false)}
+                        onClick={() => {
+                          handleProductSelect(id, false);
+                          handleAddToCart(id);
+                        }}
                       >
                         Додати до замовлення
                       </button>
