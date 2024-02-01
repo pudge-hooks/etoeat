@@ -1,5 +1,7 @@
 .category-card {
   position: relative;
+  scroll-snap-align: start;
+  -webkit-overflow-scrolling: touch;
   font-family: 'Exo 2';
 
   &::before {

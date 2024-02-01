@@ -1,0 +1,14 @@
+.layout {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.layout::-webkit-scrollbar {
+  display: none;
+}
+
+.layout__container {
+  scroll-snap-align: start;
+  -webkit-overflow-scrolling: touch;
+}

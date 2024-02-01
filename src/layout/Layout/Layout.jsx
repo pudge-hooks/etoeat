@@ -19,19 +19,26 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div>
-      <Header setIsBurgerOpen={setIsBurgerOpen} setCartModalOpen={setIsCartOpen} />
-      <main>{children}</main>
-      <Footer />
+    <div className="layout">
+      <div className="layout__container">
+        <Header
+          setIsBurgerOpen={setIsBurgerOpen}
+          setCartModalOpen={setIsCartOpen}
+        />
+      </div>
+      <div className="layout__container">
+        <main>{children}</main>
+      </div>
+      <div className="layout__container">
+        <Footer />
+      </div>
       <BurgerMenu
         isBurgerOpen={isBurgerOpen}
         setIsBurgerOpen={setIsBurgerOpen}
       />
-      {isCartOpen && 
-      <CartModal
-        isCartOpen={isCartOpen}
-        setIsCartOpen={setIsCartOpen} 
-      />}
+      {isCartOpen && (
+        <CartModal isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+      )}
     </div>
   );
 };

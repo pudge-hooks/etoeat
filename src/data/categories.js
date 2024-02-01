@@ -15,7 +15,7 @@ const categories = [
     name: 'Перші страви',
     img: 'https://1.bp.blogspot.com/-9dAxH0yTxxU/WvSlOS-Au_I/AAAAAAAAAN0/V93LCRg8i18sUTufVZSL6WiXbvDL6SNQACLcBGAs/s1600/Alexey_Lobur_big_287.jpg',
     icon: soup,
-    productsList: ['t0vKFs', 'EbbABY'],
+    productsList: ['t0vKFs', 'EbbABY', 'W6EVpT', 'ciBLkx', 'YE09KE'],
   },
   {
     id: 'BY1Af1',

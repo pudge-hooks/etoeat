@@ -1,5 +1,7 @@
 .products__item {
   position: relative;
+  scroll-snap-align: start;
+  -webkit-overflow-scrolling: touch;
 }
 
 .products__image {
