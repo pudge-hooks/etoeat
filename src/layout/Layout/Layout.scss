@@ -2,6 +2,8 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
 
 .layout::-webkit-scrollbar {
