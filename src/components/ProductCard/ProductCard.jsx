@@ -17,7 +17,7 @@ const ProductCard = ({ product, isProductSelected, setSelectedProducts }) => {
   const handleAddToCart = productId => addToCart(productId);
 
   return (
-    <section key={product.id} className="products__item scroll-snap__item">
+    <section className="products__item scroll-snap__item">
       <img
         src={product.img}
         alt={product.name}

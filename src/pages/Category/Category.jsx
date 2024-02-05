@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 
 import categories from '../../data/categories';
 import products from '../../data/products';
@@ -7,14 +8,19 @@ import CategoryBanner from '../../views/CategoryBanner/CategoryBanner';
 
 import Footer from '../../layout/Footer/Footer';
 
-import { useState } from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
 
 const Category = () => {
   const { categoryId } = useParams();
   const [selectedProducts, setSelectedProducts] = useState({});
-
   const category = categories.find(category => category.id === categoryId);
+  const topElementRef = useRef();
+
+  useEffect(() => {
+    if (topElementRef.current) {
+      topElementRef.current.scrollIntoView();
+    }
+  }, [categoryId]);
 
   if (!category) {
     return <div>Продуктів в цій категорії не знайдено</div>;
@@ -30,11 +36,13 @@ const Category = () => {
         image={category.img}
         name={category.name}
         icon={category.icon}
+        ref={topElementRef}
       />
       {filteredProducts.map(product => {
         const isProductSelected = selectedProducts[product.id];
         return (
           <ProductCard
+            key={product.id}
             product={product}
             isProductSelected={isProductSelected}
             setSelectedProducts={setSelectedProducts}
