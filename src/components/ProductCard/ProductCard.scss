@@ -1,7 +1,5 @@
 .products__item {
   position: relative;
-  scroll-snap-align: start;
-  -webkit-overflow-scrolling: touch;
 }
 
 .products__image {
@@ -10,37 +8,6 @@
   object-fit: cover;
   cursor: pointer;
 }
-
-// .products__details-btn {
-//   position: absolute;
-//   bottom: 5%;
-//   right: 5%;
-//   font-family: 'Exo 2';
-//   color: var(--white);
-//   border: 2px var(--white) solid;
-//   padding: 16px;
-//   width: 200px;
-//   font-size: 24px;
-//   background-color: rgba(255, 255, 255, 0.15);
-//   text-shadow: 1px 1px 1px var(--accent);
-//   transition: background-color 0.3s ease;
-//   box-shadow: 0px 0px 10px 1px rgba(170, 170, 170, 1);
-
-//   &:hover {
-//     background-color: rgba(255, 255, 255, 0.36);
-//   }
-
-//   @media screen and (max-width: 1024px) {
-//     font-size: 28px;
-//     width: 250px;
-//   }
-
-//   @media screen and (max-width: 480px) {
-//     padding: 14px;
-//     width: 220px;
-//     font-size: 18px;
-//   }
-// }
 
 .products__bg-overlay {
   height: 100%;

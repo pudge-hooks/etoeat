@@ -1,11 +1,14 @@
-.sections__padding {
-  padding: 60px 0;
+.scroll-snap__container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
 
-  @media screen and (max-width: 1024px) {
-    padding: 40px 0;
-  }
+.scroll-snap__container::-webkit-scrollbar {
+  display: none;
+}
 
-  @media screen and (max-width: 768px) {
-    padding: 30px 0;
-  }
+.scroll-snap__item {
+  scroll-snap-align: start;
+  -webkit-overflow-scrolling: touch;
 }

@@ -1,8 +1,6 @@
-import './Layout.scss';
-
 import { useState } from 'react';
 
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
@@ -19,19 +17,13 @@ const Layout = ({ children }) => {
   }
 
   return (
-    <div className="layout">
-      <div className="layout__container">
-        <Header
-          setIsBurgerOpen={setIsBurgerOpen}
-          setCartModalOpen={setIsCartOpen}
-        />
-      </div>
-      <div className="layout__container">
-        <main>{children}</main>
-      </div>
-      <div className="layout__container">
-        <Footer />
-      </div>
+    <div>
+      <Header
+        setIsBurgerOpen={setIsBurgerOpen}
+        setCartModalOpen={setIsCartOpen}
+      />
+      <main>{children}</main>
+      {/* <Footer /> */}
       <BurgerMenu
         isBurgerOpen={isBurgerOpen}
         setIsBurgerOpen={setIsBurgerOpen}

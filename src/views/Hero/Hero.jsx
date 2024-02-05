@@ -8,7 +8,7 @@ import Container from '../../components/Container/Container';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero scroll-snap__item">
       <div className="hero__bg-container">
         <video
           src={bgVideo}

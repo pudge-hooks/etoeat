@@ -6,7 +6,7 @@ import './CategoryCard.scss';
 
 const CategoryCard = ({ category, link }) => {
   return (
-    <li className="category-card">
+    <section className="category-card scroll-snap__item">
       <img
         className="category-card__image"
         src={category.img}
@@ -14,9 +14,11 @@ const CategoryCard = ({ category, link }) => {
       />
       <Container className="category-card__container">
         <h2 className="category-card__title">{category.name}</h2>
-        <Link to={link} className="category-card__button">Обрати категорію →</Link>
+        <Link to={link} className="category-card__button">
+          Обрати категорію →
+        </Link>
       </Container>
-    </li>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import down from '../../assets/svg/arrow-down.svg';
 
 const CategoryBanner = ({ image, name, icon }) => {
   return (
-    <section className="category-banner">
+    <section className="category-banner scroll-snap__item">
       <img src={image} alt={name} className="category-banner__img" />
       <div className="category-banner__bg-overlay"></div>
       <Container className="category-banner__container">
