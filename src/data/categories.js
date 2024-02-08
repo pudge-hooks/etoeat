@@ -1,12 +1,10 @@
 import mainDish from '../assets/svg/main-dish.svg';
 import soup from '../assets/svg/soup.svg';
-import snack from '../assets/svg/snacks.svg';
 import salad from '../assets/svg/salad.svg';
 import burger from '../assets/svg/burger.svg';
 import garnish from '../assets/svg/garnish.svg';
 import softDrink from '../assets/svg/soft-drink.svg';
 import dessert from '../assets/svg/dessert.svg';
-import cocktail from '../assets/svg/cocktail.svg';
 
 const categories = [
   {
@@ -22,13 +20,6 @@ const categories = [
     img: 'https://www.southernliving.com/thmb/XIHmbOagRrWxoOOrYnQih5VEV9A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2548301_QFSHe_646_0_0_0-fbd2a27e126942c8b33dbc3d696b0501.jpg',
     icon: mainDish,
     productsList: ['tGpyx2', 'ciBLkx'],
-  },
-  {
-    id: 'BY1Af2',
-    name: 'Закуски',
-    img: 'https://lady-day.com.ua/wp-content/uploads/2023/12/preview_preview_image-n2mnlytgnjjo-e-vu6_tcruiu_g3b1uda.jpg',
-    icon: snack,
-    productsList: ['QWEGG2', 'QWEGG3'],
   },
   {
     id: 'BY1Af3',
@@ -64,14 +55,7 @@ const categories = [
     img: 'https://cdna.artstation.com/p/assets/images/images/001/952/940/large/irapoan-junior-latas-colorgrade.jpg?1455069773',
     icon: softDrink,
     productsList: ['W6EVpT', '3R9UeF'],
-  },
-  {
-    id: 'BY1Af9',
-    name: 'Коктейлі',
-    img: 'https://bistrobadia.de/wp-content/uploads/2020/04/Shikaf-libanesischer-Fruchtcocktail.jpg',
-    icon: cocktail,
-    productsList: ['QWEG49', 'QWEG89'],
-  },
+  }
 ];
 
 export default categories;
