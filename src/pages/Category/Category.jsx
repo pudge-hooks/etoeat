@@ -9,6 +9,9 @@ import CategoryBanner from '../../views/CategoryBanner/CategoryBanner';
 import Footer from '../../layout/Footer/Footer';
 
 import ProductCard from '../../components/ProductCard/ProductCard';
+import Container from '../../components/Container/Container';
+
+import './Category.scss';
 
 const Category = () => {
   const { categoryId } = useParams();
@@ -31,24 +34,26 @@ const Category = () => {
   );
 
   return (
-    <div className="scroll-snap__container">
+    <div>
       <CategoryBanner
         image={category.img}
         name={category.name}
         icon={category.icon}
         ref={topElementRef}
       />
-      {filteredProducts.map(product => {
-        const isProductSelected = selectedProducts[product.id];
-        return (
-          <ProductCard
-            key={product.id}
-            product={product}
-            isProductSelected={isProductSelected}
-            setSelectedProducts={setSelectedProducts}
-          />
-        );
-      })}
+      <Container className='category__container'>
+        {filteredProducts.map(product => {
+          const isProductSelected = selectedProducts[product.id];
+          return (
+            <ProductCard
+              key={product.id}
+              product={product}
+              isProductSelected={isProductSelected}
+              setSelectedProducts={setSelectedProducts}
+            />
+          );
+        })}
+      </Container>
       <Footer />
     </div>
   );

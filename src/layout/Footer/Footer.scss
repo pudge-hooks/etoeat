@@ -13,9 +13,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 25px;
 
-
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 800px) {
     flex-direction: column;
     gap: 20px;
   }
@@ -37,10 +37,6 @@
 
 .footer__release {
   font-size: 18px;
-
-  @media screen and (max-width: 850px) {
-    display: none;
-  }
 
   @media screen and (max-width: 480px) {
     display: block;

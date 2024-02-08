@@ -2,60 +2,37 @@ import './ProductCard.scss';
 
 import { useCart } from '../../data/CartContext';
 
-import Container from '../Container/Container';
+import { useState } from 'react';
 
-const ProductCard = ({ product, isProductSelected, setSelectedProducts }) => {
-  const handleProductSelect = (productId, isSelected) => {
-    setSelectedProducts(prevSelectedProducts => ({
-      ...prevSelectedProducts,
-      [productId]: isSelected,
-    }));
-  };
+const ProductCard = ({ product, setSelectedProducts }) => {
+
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isInCart, setIsInCart] = useState(false);
+
+  const handleFlip = () => setIsFlipped(!isFlipped);
 
   const { addToCart } = useCart();
 
-  const handleAddToCart = productId => addToCart(productId);
-
+  const handleAddToCart = productId => {
+    addToCart(productId);
+    setIsInCart(true);
+  }
   return (
-    <section className="products__item scroll-snap__item">
-      <img
-        src={product.img}
-        alt={product.name}
-        className="products__image"
-        onClick={() => handleProductSelect(product.id, true)}
-      />
-      <div
-        className={`products__info-wrapper ${isProductSelected ? 'show' : ''}`}
-      >
-        <div className="products__bg-overlay"></div>
-        <div
-          className="products__info-content"
-          onClick={() => handleProductSelect(product.id, false)}
-        >
-          <Container className="products__container">
-            <div
-              className={`products__info ${isProductSelected ? 'slide-in' : 'slide-out'}`}
-            >
-              <h3 className="products__title">{product.name}</h3>
-              <p className="products__description">{product.compound}</p>
-              <div className="products__price-weight">
-                <span className="products__span">({product.weight} грам)</span>
-                <span className="products__span">{product.price} грн</span>
-              </div>
-              <button
-                className="products__button"
-                onClick={() => {
-                  handleProductSelect(product.id, false);
-                  handleAddToCart(product.id);
-                }}
-              >
-                Додати до замовлення
-              </button>
-            </div>
-          </Container>
+    <li className='products__item'>
+      <h2 className='products__name'>{product.name}</h2>
+      <div className={`products__container-inner ${isFlipped ? 'flipped' : ''}`}>
+        <img className={`products__image ${isFlipped ? '' : 'show'}`} src={product.img} alt={product.name}/>
+        <div className={`products__compound ${isFlipped ? 'show' : ''}`}>
+          <h3>Склад:</h3>
+          <p>NNWQnekqjwenr kjqwneq kqwe njwenkqwjwq nkejwj jwnqjke kke ke kkqwe kek wkqe wkekweekw kewe</p>
         </div>
       </div>
-    </section>
+      <div className='products__container'>
+        <button className='products__button' onClick={handleFlip}>Детальніше</button>
+        {!isInCart && <button className='products__button' onClick={() => handleAddToCart(product.id)}>У кошик</button>}
+        {isInCart && <p className='products__added-info'>Додано</p>}
+      </div>
+    </li>
   );
 };
 
