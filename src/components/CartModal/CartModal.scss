@@ -70,7 +70,7 @@
 }
 
 .open-modal {
-  animation: scaleInAnimation 300ms ease-in-out;
+  animation: scaleInAnimation 150ms ease-in-out;
 }
 
 .empty{
@@ -83,6 +83,7 @@
   0% {
     transform: scale(0);
   }
+  
   100% {
     transform: scale(1);
   }

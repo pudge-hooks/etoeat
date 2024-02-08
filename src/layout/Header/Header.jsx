@@ -33,7 +33,10 @@ const Header = ({ setIsBurgerOpen, setCartModalOpen }) => {
             iconClassName="header__logo"
           />
           <div className="header__controls">
-            <button onClick={() => setCartModalOpen(true)}>
+            <button
+              onClick={() => setCartModalOpen(true)}
+              className="header__cart-btn"
+            >
               <img
                 className="header__cart-icon"
                 src={CartIcon}
