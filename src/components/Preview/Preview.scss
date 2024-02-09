@@ -43,6 +43,16 @@
   animation: vision 2s ease-in-out;
 }
 
+.preview__small-leter{
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.preview__big-leter{
+  font-size: 43px;
+  font-weight: 750;
+}
+
 @keyframes vision {
   from {
     opacity: 0;

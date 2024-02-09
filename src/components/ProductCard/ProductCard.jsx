@@ -4,7 +4,7 @@ import { useCart } from '../../data/CartContext';
 
 import { useState } from 'react';
 
-const ProductCard = ({ product, setSelectedProducts }) => {
+const ProductCard = ({ product }) => {
 
   const [isFlipped, setIsFlipped] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
@@ -19,7 +19,10 @@ const ProductCard = ({ product, setSelectedProducts }) => {
   }
   return (
     <li className='products__item'>
-      <h2 className='products__name'>{product.name}</h2>
+      <div>
+        <h2 className='products__name'>{product.name}</h2>
+        <h2>{product.price}грн.</h2>
+      </div>
       <div className={`products__container-inner ${isFlipped ? 'flipped' : ''}`}>
         <img className={`products__image ${isFlipped ? '' : 'show'}`} src={product.img} alt={product.name}/>
         <div className={`products__compound ${isFlipped ? 'show' : ''}`}>
