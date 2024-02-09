@@ -7,6 +7,7 @@ import Footer from '../../layout/Footer/Footer';
 import Hero from '../../views/Hero/Hero';
 
 const Home = () => {
+
   return (
     <div className="scroll-snap__container">
       <Hero />

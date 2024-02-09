@@ -1,0 +1,54 @@
+.preview{
+  height: 100vh;
+  width: 100vw;
+  background: var(--black);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.preview__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview__container-inner{
+  position: relative;
+}
+
+.preview__logo{
+  filter: drop-shadow(0 0 5px #fff);
+}
+
+.preview__eto-label{
+  position: absolute;
+  top: 160px;
+  left: 80px;
+  font-weight: bold;
+  font-family: 'Exo 2';
+}
+
+.preview__eat-label{
+  color: var(--white);
+  font-weight: bold;
+  line-height: 50px;
+  font-family: 'Exo 2';
+  opacity: 1;
+  animation: vision 2s ease-in-out;
+}
+
+@keyframes vision {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
