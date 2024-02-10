@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
   }
   return (
     <li className='products__item'>
-      <div>
+      <div className='products__title-container'>
         <h2 className='products__name'>{product.name}</h2>
         <h2>{product.price}грн.</h2>
       </div>
