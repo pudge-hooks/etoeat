@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
         <img className={`products__image ${isFlipped ? '' : 'show'}`} src={product.img} alt={product.name}/>
         <div className={`products__compound ${isFlipped ? 'show' : ''}`}>
           <h3>Склад:</h3>
-          <p>NNWQnekqjwenr kjqwneq kqwe njwenkqwjwq nkejwj jwnqjke kke ke kkqwe kek wkqe wkekweekw kewe</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum accusantium voluptatum totam omnis consequuntur nisi tempora ab natus! Voluptas tempora repellat ut, deleniti facilis vel! Iste odit eligendi accusantium modi.</p>
         </div>
       </div>
       <div className='products__container'>
