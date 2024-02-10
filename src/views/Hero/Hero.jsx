@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   let radius;
   if (window.innerWidth <= 480) {
-    radius = 160;
+    radius = 150;
   } else if (window.innerWidth <= 1024) {
     radius = 180;
   } else if (window.innerWidth <= 1280) {
