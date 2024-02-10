@@ -4,7 +4,7 @@ import salad from '../assets/svg/salad.svg';
 import burger from '../assets/svg/burger.svg';
 import garnish from '../assets/svg/garnish.svg';
 import softDrink from '../assets/svg/soft-drink.svg';
-import dessert from '../assets/svg/dessert.svg';
+// import dessert from '../assets/svg/dessert.svg';
 
 const categories = [
   {
@@ -42,13 +42,13 @@ const categories = [
     icon: garnish,
     productsList: ['QWEG19'],
   },
-  {
-    id: 'BY1Af6',
-    name: 'Десерти',
-    img: 'https://insanelygoodrecipes.com/wp-content/uploads/2021/05/Cherry-Cheesecake-with-Berry-Sauce.png',
-    icon: dessert,
-    productsList: ['QWEG29', 'QWEG39'],
-  },
+  // {
+  //   id: 'BY1Af6',
+  //   name: 'Десерти',
+  //   img: 'https://insanelygoodrecipes.com/wp-content/uploads/2021/05/Cherry-Cheesecake-with-Berry-Sauce.png',
+  //   icon: dessert,
+  //   productsList: ['QWEG29', 'QWEG39'],
+  // },
   {
     id: 'BY1Af7',
     name: 'Напої',
