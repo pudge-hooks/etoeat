@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     const preViewTimer = setTimeout(() => {
       setShowPreView(false);
-    }, 3000);
+    }, 5000);
     return () => clearTimeout(preViewTimer);
   }, [audio])
 
