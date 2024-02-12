@@ -17,7 +17,7 @@ const categories = [
   {
     id: 'BY1Af1',
     name: 'Основні страви',
-    img: 'https://www.southernliving.com/thmb/XIHmbOagRrWxoOOrYnQih5VEV9A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2548301_QFSHe_646_0_0_0-fbd2a27e126942c8b33dbc3d696b0501.jpg',
+    img: 'https://vyhuhol.com.ua/wp-content/uploads/2023/04/SAM_0810-scaled-e1682513924480.jpg',
     icon: mainDish,
     productsList: ['tGpyx2', 'ciBLkx'],
   },
@@ -55,7 +55,7 @@ const categories = [
     img: 'https://cdna.artstation.com/p/assets/images/images/001/952/940/large/irapoan-junior-latas-colorgrade.jpg?1455069773',
     icon: softDrink,
     productsList: ['W6EVpT', '3R9UeF'],
-  }
+  },
 ];
 
 export default categories;
