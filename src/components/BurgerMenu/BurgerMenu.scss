@@ -21,7 +21,7 @@
     position: absolute;
     top: 0;
     right: -100vw;
-    width: 80vw;
+    width: 60vw;
     height: 100%;
     background-color: var(--accent);
     transition: right 300ms ease;
@@ -29,6 +29,10 @@
 
     &.open {
       right: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 80vw;
     }
   }
 }
