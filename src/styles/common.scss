@@ -1,6 +1,8 @@
 .scroll-snap__container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
   height: 100vh;
 }
 
@@ -9,6 +11,7 @@
 }
 
 .scroll-snap__item {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   -webkit-overflow-scrolling: touch;
+  width: 100vw;
 }

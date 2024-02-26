@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-// import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       setShowPreView(false);
     }, 5000);
     return () => clearTimeout(preViewTimer);
-  }, [audio])
+  }, [audio]);
 
   return (
     <div>
@@ -43,6 +43,7 @@ const Layout = ({ children }) => {
         <CartModal isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
       )}
       {showPreView && <Preview/>}
+      <Footer />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import './ProductCard.scss';
 
 import { useCart } from '../../data/CartContext';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import BurgerVideo from '../../assets/video/burgerVideo.mp4';
 

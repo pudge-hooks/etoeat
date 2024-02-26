@@ -4,8 +4,6 @@ import { useEffect, useRef } from 'react';
 import categories from '../../data/categories';
 import products from '../../data/products';
 
-import Footer from '../../layout/Footer/Footer';
-
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Container from '../../components/Container/Container';
 
@@ -31,20 +29,14 @@ const Category = () => {
   );
 
   return (
-    <div className='category'>
-      <Container className='category__container'>
-        <ul className='category__list'>
+    <div className="category">
+      <Container className="category__container">
+        <ul className="category__list">
           {filteredProducts.map(product => {
-            return (
-              <ProductCard
-                key={product.id}
-                product={product}
-              />
-            );
+            return <ProductCard key={product.id} product={product} />;
           })}
         </ul>
       </Container>
-      <Footer />
     </div>
   );
 };

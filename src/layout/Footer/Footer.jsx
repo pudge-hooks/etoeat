@@ -5,7 +5,7 @@ import Social from '../../components/Social/Social';
 
 const Footer = () => {
   return (
-    <footer className="footer scroll-snap__item">
+    <footer className="footer">
       <Container className="footer__container">
         <Logo />
         <a className="footer__order-number" href="tel:+380630000000">
