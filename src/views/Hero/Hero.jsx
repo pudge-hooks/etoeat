@@ -2,28 +2,32 @@ import './Hero.scss';
 
 import down from '../../assets/svg/arrow-down.svg';
 
-import categories from '../../data/categories';
+import { useMenu } from '../../data/MenuContext';
 
 import Container from '../../components/Container/Container';
 
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  const { menu } = useMenu();
+
   return (
     <section className="hero scroll-snap__item">
       <Container className="hero__container">
         <ul className="hero__list">
-          {categories.map(({ name, id, img }) => {
-            const link = `/${id}`;
+          {menu.Groups?.map(({ Name, ID }) => {
+            const link = `/${ID}`;
             return (
-              <li key={id} className="hero__item">
+              <li key={ID} className="hero__item">
                 <Link
                   to={link}
                   className="hero__link"
-                  style={{ backgroundImage: `url(${img})` }}
+                  style={{
+                    backgroundImage: `url('https://1.bp.blogspot.com/-9dAxH0yTxxU/WvSlOS-Au_I/AAAAAAAAAN0/V93LCRg8i18sUTufVZSL6WiXbvDL6SNQACLcBGAs/s1600/Alexey_Lobur_big_287.jpg')`,
+                  }}
                 >
                   <div className="hero__bg-overlay"></div>
-                  <h2 className="hero__name">{name}</h2>
+                  <h2 className="hero__name">{Name}</h2>
                 </Link>
               </li>
             );
