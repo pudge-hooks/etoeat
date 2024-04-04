@@ -23,7 +23,7 @@ export const MenuProvider = ({ children }) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        AccessToken: 'ce17b1592176524e730f46e81895095a',
+        AccessToken: accessToken,
       },
     })
       .then(res => res.json())

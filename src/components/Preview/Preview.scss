@@ -11,16 +11,34 @@
   z-index: 1;
 }
 
+// .preview__logo{
+//   width: 300px;
+//   height: 300px;
+//   background-color: transparent;
+//   border: 70px white solid;
+//   border-radius: 50%;
+// }
+
 .preview__image{
   scale: 1;
   animation: scaling 3s ease-in-out;
 }
 
 @keyframes scaling{
-  from {
+  0% {
     scale: 0;
   }
-  to{
+  30%{
     scale: 1;
+  }
+  50%{
+    scale: 1;
+  }
+  70%{
+    scale: 0.9;
+    transform: perspective(200px) rotateX(-15deg);
+  }
+  100%{
+    scale: 20;
   }
 }
