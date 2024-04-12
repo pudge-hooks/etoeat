@@ -21,7 +21,11 @@ const Category = () => {
   }, [categoryId]);
 
   if (!category) {
-    return <div>Продуктів в цій категорії не знайдено</div>;
+    return (
+      <div className="category__null">
+        Продуктів в цій категорії не знайдено
+      </div>
+    );
   }
 
   const filteredProducts = products.filter(product =>
