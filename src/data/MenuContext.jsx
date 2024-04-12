@@ -6,7 +6,7 @@ export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState({});
   const [accessToken, setAccessToken] = useState('');
 
-  useEffect(() => {
+  const authenticate = () => {
     fetch('https://possvc3.servio.support/29085/POSExternal/Authenticate', {
       method: 'POST',
       body: JSON.stringify({
@@ -16,18 +16,22 @@ export const MenuProvider = ({ children }) => {
     })
       .then(res => res.json())
       .then(data => setAccessToken(data.Token));
-  }, []);
+  }
 
   useEffect(() => {
-    fetch('https://possvc3.servio.support/29085/POSExternal/Get_TarifItemExt', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        AccessToken: accessToken,
-      },
-    })
-      .then(res => res.json())
-      .then(data => setMenu(data));
+    authenticate();
+
+    if(accessToken){
+      fetch('https://possvc3.servio.support/29085/POSExternal/Get_TarifItemExt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          AccessToken: accessToken,
+        },
+      })
+        .then(res => res.json())
+        .then(data => setMenu(data));
+    }
   }, [accessToken]);
 
   const value = {
