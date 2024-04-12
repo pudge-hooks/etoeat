@@ -6,32 +6,46 @@ export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState({});
   const [accessToken, setAccessToken] = useState('');
 
-  const authenticate = () => {
-    fetch('https://possvc3.servio.support/29085/POSExternal/Authenticate', {
-      method: 'POST',
-      body: JSON.stringify({
-        CardCode: '1111',
-        TermID: 'OPERATOR',
-      }),
-    })
-      .then(res => res.json())
-      .then(data => setAccessToken(data.Token));
-  }
+  useEffect(() => {
+    const authenticate = async () => {
+      try {
+        const response = await fetch('https://possvc3.servio.support/29085/POSExternal/Authenticate', {
+          method: 'POST',
+          body: JSON.stringify({
+            CardCode: '1111',
+            TermID: 'OPERATOR',
+          }),
+        });
+        const data = await response.json();
+        setAccessToken(data.Token);
+      } catch (error) {
+        console.error('Authentication error:', error);
+      }
+    };
+
+    authenticate();
+  }, []);
 
   useEffect(() => {
-    authenticate();
+    const fetchMenu = async () => {
+      try {
+        if (accessToken) {
+          const response = await fetch('https://possvc3.servio.support/29085/POSExternal/Get_TarifItemExt', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              AccessToken: accessToken,
+            },
+          });
+          const data = await response.json();
+          setMenu(data);
+        }
+      } catch (error) {
+        console.error('Failed to fetch menu data:', error);
+      }
+    };
 
-    if(accessToken){
-      fetch('https://possvc3.servio.support/29085/POSExternal/Get_TarifItemExt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          AccessToken: accessToken,
-        },
-      })
-        .then(res => res.json())
-        .then(data => setMenu(data));
-    }
+    fetchMenu();
   }, [accessToken]);
 
   const value = {
