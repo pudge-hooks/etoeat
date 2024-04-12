@@ -6,26 +6,37 @@ import Header from '../Header/Header';
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 import CartModal from '../../components/CartModal/CartModal';
 import Preview from '../../components/Preview/Preview';
-import soundFile from '../../assets/sound/sound.mp3';
 
 const Layout = ({ children }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [showPreView, setShowPreView] = useState(true);
-  const [audio] = useState(new Audio(soundFile));
+  const [showPreView, setShowPreView] = useState(false);
 
-  if (isBurgerOpen || isCartOpen) {
+  if (isBurgerOpen || isCartOpen || showPreView) {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = 'auto';
   }
 
   useEffect(() => {
+    function handlePageLoad() {
+      setShowPreView(true);
+    }
+
+    window.addEventListener('load', handlePageLoad);
+
+    return () => {
+      window.removeEventListener('load', handlePageLoad);
+    };
+  }, []);
+
+  useEffect(() => {
+    setShowPreView(true);
     const preViewTimer = setTimeout(() => {
       setShowPreView(false);
-    }, 3000);
+    }, 4000);
     return () => clearTimeout(preViewTimer);
-  }, [audio]);
+  }, []);
 
   return (
     <div>
@@ -34,7 +45,6 @@ const Layout = ({ children }) => {
         setCartModalOpen={setIsCartOpen}
       />
       <main>{children}</main>
-      {/* <Footer /> */}
       <BurgerMenu
         isBurgerOpen={isBurgerOpen}
         setIsBurgerOpen={setIsBurgerOpen}

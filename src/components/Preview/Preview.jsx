@@ -3,8 +3,8 @@ import './Preview.scss';
 
 const Preview = () => {
   return createPortal(
-    <div className="preview">
-      <div className="preview__logo"></div>
+    <div className='preview'>
+      <div className='preview__logo'></div>
     </div>,
     document.querySelector('#modal'),
   );
