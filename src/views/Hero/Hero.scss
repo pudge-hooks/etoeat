@@ -50,6 +50,9 @@
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.36);
+    .hero__bg-overlay {
+      background-color: #191919;
+    }
   }
 
   @media screen and (max-width: 1024px) {
@@ -87,10 +90,6 @@
   background-color: var(--black);
   opacity: 0.4;
   transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #191919;
-  }
 }
 
 .hero__about {
