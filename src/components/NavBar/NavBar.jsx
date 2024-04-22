@@ -2,16 +2,19 @@ import './NavBar.scss';
 
 import { Link } from 'react-router-dom';
 
-import categories from '../../data/categories';
+import { useMenu } from '../../data/MenuContext';
 
 const NavBar = ({ className = '', setIsBurgerOpen, setIsHovered }) => {
+  const { menu } = useMenu();
+  const categories = menu.Groups?.slice(0, menu.Groups?.length - 3);
+
   return (
     <nav className={`nav ${className}`}>
       <ul className="nav__list">
-        {categories.map(({ id, name }) => {
-          const link = `/${id}`;
+        {categories?.map(({ ID, Name }) => {
+          const link = `/${ID}`;
           return (
-            <li key={id} className="nav__item">
+            <li key={ID} className="nav__item">
               <Link
                 to={link}
                 className="nav__link"
@@ -20,7 +23,7 @@ const NavBar = ({ className = '', setIsBurgerOpen, setIsHovered }) => {
                   if (setIsHovered) setIsHovered(false);
                 }}
               >
-                {name}
+                {Name}
               </Link>
             </li>
           );

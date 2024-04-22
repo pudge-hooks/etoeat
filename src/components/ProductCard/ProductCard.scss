@@ -9,11 +9,11 @@
   perspective: 1500px;
 
   @media screen and (max-width: 1280px) {
-    width: calc((100% - 40px) / 2)
+    width: calc((100% - 40px) / 2);
   }
 
   @media screen and (max-width: 1024px) {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -28,7 +28,7 @@
   z-index: 3;
 
   @media screen and (max-width: 480px) {
-    height: 50vh
+    height: 50vh;
   }
 }
 
@@ -80,19 +80,41 @@
   transform-style: preserve-3d;
 
   @media screen and (max-width: 480px) {
-    height: 50vh
+    height: 50vh;
   }
 }
 
 .products__container-inner.flipped {
   transform: rotateY(180deg);
+  position: relative;
 }
 
 .products__compound {
+  position: absolute;
   height: 50vh;
   transform: rotateY(180deg);
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
   z-index: 1;
+
+  &--pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--text {
+    font-family: 'Exo 2';
+    font-size: 20px;
+  }
+
+  &--title {
+    font-family: 'Exo 2';
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 .products__title-container {
@@ -103,6 +125,10 @@
 .show {
   display: block;
   position: inherit;
+}
+
+.hide {
+  display: none;
 }
 
 .products__added-info {

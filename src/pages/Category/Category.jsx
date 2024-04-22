@@ -1,8 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 
-import categories from '../../data/categories';
-import products from '../../data/products';
+import { useMenu } from '../../data/MenuContext';
 
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Container from '../../components/Container/Container';
@@ -10,10 +9,15 @@ import Container from '../../components/Container/Container';
 import './Category.scss';
 
 const Category = () => {
-  const { categoryId } = useParams();
-  const category = categories.find(category => category.id === categoryId);
-  const topElementRef = useRef();
+  const { menu } = useMenu();
+  const categories = menu.Groups?.slice(0, menu.Groups?.length - 3);
 
+  const { categoryId } = useParams();
+  const category = categories?.find(
+    category => category.ID === Number(categoryId),
+  );
+
+  const topElementRef = useRef();
   useEffect(() => {
     if (topElementRef.current) {
       topElementRef.current.scrollIntoView();
@@ -21,23 +25,15 @@ const Category = () => {
   }, [categoryId]);
 
   if (!category) {
-    return (
-      <div className="category__null">
-        Продуктів в цій категорії не знайдено
-      </div>
-    );
+    return <div className="category__null"></div>;
   }
-
-  const filteredProducts = products.filter(product =>
-    category.productsList.includes(product.id),
-  );
 
   return (
     <div className="category">
       <Container className="category__container">
         <ul className="category__list">
-          {filteredProducts.map(product => {
-            return <ProductCard key={product.id} product={product} />;
+          {category?.Items.map(product => {
+            return <ProductCard key={product.ID} product={product} />;
           })}
         </ul>
       </Container>
