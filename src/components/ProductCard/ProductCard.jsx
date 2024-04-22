@@ -6,12 +6,11 @@ import { useCart } from '../../data/CartContext';
 import { useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 import productsMedia from '../../data/productsMedia';
 
 const ProductCard = ({ product }) => {
-  console.log(product);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isInCart, setIsInCart] = useState(false);
 
@@ -30,6 +29,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <li className="products__item">
+      <h3 className="products__compound--title">{product.Name}</h3>
       <div
         className={`products__container-inner ${isFlipped ? 'flipped' : ''}`}
       >
@@ -37,8 +37,7 @@ const ProductCard = ({ product }) => {
           spaceBetween={30}
           slidesPerView={1}
           loop={true}
-          modules={[EffectFade, Pagination]}
-          effect="fade"
+          modules={[Pagination]}
           pagination={{
             dynamicBullets: true,
             dynamicMainBullets: 1,
@@ -68,7 +67,6 @@ const ProductCard = ({ product }) => {
           ))}
         </Swiper>
         <div className={`products__compound ${isFlipped ? '' : 'hide'}`}>
-          <h3 className="products__compound--title">{product.Name}</h3>
           <p className="products__compound--text">{product.Description}</p>
           <div className="products__compound--pricing">
             <p className="products__compound--text">{product.Price} грн</p>

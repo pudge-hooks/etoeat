@@ -14,7 +14,7 @@ const Header = ({ setIsBurgerOpen, setCartModalOpen }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleScroll = () => {
-    setScrolled(window.scrollY > 200);
+    setScrolled(window.scrollY > 50);
   };
 
   useEffect(() => {
