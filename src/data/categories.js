@@ -4,7 +4,6 @@ import salad from '../assets/svg/salad.svg';
 import burger from '../assets/svg/burger.svg';
 import garnish from '../assets/svg/garnish.svg';
 import softDrink from '../assets/svg/soft-drink.svg';
-// import dessert from '../assets/svg/dessert.svg';
 
 const categories = [
   {

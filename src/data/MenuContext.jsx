@@ -39,6 +39,7 @@ export const MenuProvider = ({ children }) => {
           });
           const data = await response.json();
           setMenu(data);
+          console.log(data)
         }
       } catch (error) {
         console.error('Failed to fetch menu data:', error);
