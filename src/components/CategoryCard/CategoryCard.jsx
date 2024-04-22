@@ -4,12 +4,14 @@ import Container from '../Container/Container';
 
 import './CategoryCard.scss';
 
+import categoriesMediaData from '../../data/categoriesMedia';
+
 const CategoryCard = ({ category, link }) => {
   return (
     <section className="category-card scroll-snap__item">
       <img
         className="category-card__image"
-        src="https://i.postimg.cc/wTgCcYvg/jpeg-optimizer-0-T5-A0848.jpg"
+        src={categoriesMediaData[category.ID]}
         alt="category_background"
       />
       <Container className="category-card__container">

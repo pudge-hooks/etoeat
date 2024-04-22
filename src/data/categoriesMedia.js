@@ -8,3 +8,5 @@ const categoriesMediaData = {
   '5424': 'https://i.postimg.cc/c4Ds5BrK/jpeg-optimizer-0-T5-A0666.jpg',
   '5425': 'https://i.postimg.cc/SxMH7k26/jpeg-optimizer-DSC-7045.jpg'
 }
+
+export default categoriesMediaData;

@@ -4,6 +4,8 @@ import down from '../../assets/svg/arrow-down.svg';
 
 import Container from '../../components/Container/Container';
 
+import categoriesMediaData from '../../data/categoriesMedia';
+
 import { Link } from 'react-router-dom';
 
 const Hero = ({ categories }) => {
@@ -19,7 +21,7 @@ const Hero = ({ categories }) => {
                   to={link}
                   className="hero__link"
                   style={{
-                    backgroundImage: `url('https://i.postimg.cc/wTgCcYvg/jpeg-optimizer-0-T5-A0848.jpg')`,
+                    backgroundImage: `url(${categoriesMediaData[ID]})`,
                   }}
                 >
                   <div className="hero__bg-overlay"></div>

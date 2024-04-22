@@ -93,6 +93,7 @@
 .products__compound {
   position: absolute;
   height: 50vh;
+  width: 100%;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -108,7 +109,7 @@
 
   &--text {
     font-family: 'Exo 2';
-    font-size: 20px;
+    font-size: 22px;
   }
 
   &--title {
