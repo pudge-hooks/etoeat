@@ -4,13 +4,14 @@ import { createPortal } from 'react-dom';
 import './CartModal.scss';
 import Container from '../Container/Container';
 import close from '../../assets/svg/close.svg';
-import products from '../../data/products';
 import Form from '../Form/Form';
+import { useMenu } from '../../data/MenuContext';
 
 const CartModal = ({isCartOpen, setIsCartOpen}) => {
   const { cartItems, totalAmount, calculateTotalAmount } = useCart();
+  const { products } = useMenu();
 
-  const cartProducts = products.filter((product) => cartItems.includes(product.id))
+  const cartProducts = products.filter((product) => cartItems.includes(product.ID))
 
   calculateTotalAmount(cartProducts);
 
@@ -22,7 +23,7 @@ const CartModal = ({isCartOpen, setIsCartOpen}) => {
           <h2 className='cart__title'>Кошик</h2>
           <ul className='cart__products-list'>
             {cartProducts.map((item) => (
-              <CartItem key={item.id} item={item} calculateTotalAmount={calculateTotalAmount} cartProducts={cartProducts}/>
+              <CartItem key={item.ID} item={item} calculateTotalAmount={calculateTotalAmount} cartProducts={cartProducts}/>
             ))}
           </ul>
           <p className='cart__summ'>Разом до сплати: {totalAmount}грн</p>

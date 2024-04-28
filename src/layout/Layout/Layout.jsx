@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     function handlePageLoad() {
       setShowPreView(true);
+      console.log('asd');
     }
 
     window.addEventListener('load', handlePageLoad);
@@ -31,7 +32,7 @@ const Layout = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    setShowPreView(true);
+    // setShowPreView(true);
     const preViewTimer = setTimeout(() => {
       setShowPreView(false);
     }, 4000);

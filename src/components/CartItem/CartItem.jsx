@@ -30,13 +30,13 @@ const CartItem = ({ item, calculateTotalAmount, cartProducts }) => {
     <li className='cart-item'>
       <Container className='cart-item__container'>
         <div className='cart-item__photo-container'>
-          <img className='cart-item__photo' src={item.img} alt='cart-item' />
+          <img className='cart-item__photo' src='https://i.postimg.cc/g0m8QJ6t/jpeg-optimizer-DSC-7039.jpg' alt='cart-item' />
         </div>
         <div className='cart-item__description'>
-          <h3>{item.name}</h3>
+          <h3>{item.Name}</h3>
           <div className='cart-item__inner-container'>
             <div>
-              <p>Ціна: {item.price}грн</p>
+              <p>Ціна: {item.Price}грн</p>
               <div className='cart-item__count-container'>
                 <button onClick={handlePlus}>
                   <img className='cart-item__plus' src={Plus} alt='plus'/>
@@ -47,7 +47,7 @@ const CartItem = ({ item, calculateTotalAmount, cartProducts }) => {
                 </button>
               </div>
             </div>
-            <button className='cart-item__remove' onClick={() => removeFromCart(item.id)}>Видалити</button>
+            <button className='cart-item__remove' onClick={() => removeFromCart(item.ID)}>Видалити</button>
           </div>
         </div>
       </Container>

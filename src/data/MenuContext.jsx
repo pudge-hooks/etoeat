@@ -4,7 +4,9 @@ export const MenuContext = createContext();
 
 export const MenuProvider = ({ children }) => {
   const [menu, setMenu] = useState({});
+  const [products, setProducts] = useState([]);
   const [accessToken, setAccessToken] = useState('');
+  const categories = menu.Groups?.slice(0, menu.Groups?.length - 3);
 
   useEffect(() => {
     const authenticate = async () => {
@@ -54,8 +56,20 @@ export const MenuProvider = ({ children }) => {
     fetchMenu();
   }, [accessToken]);
 
+  useEffect(() => {
+    if(categories){
+      setProducts(prevProducts => {
+        const allItems = categories.flatMap(item => item.Items);
+        return allItems;
+      });
+    }
+  }, [menu]);
+  
+
+
   const value = {
     menu,
+    products
   };
 
   return <MenuContext.Provider value={value}>{children}</MenuContext.Provider>;
