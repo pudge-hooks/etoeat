@@ -63,7 +63,7 @@ export const MenuProvider = ({ children }) => {
         return allItems;
       });
     }
-  }, [menu]);
+  }, [menu, categories]);
   
 
 
