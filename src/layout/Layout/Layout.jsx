@@ -19,20 +19,10 @@ const Layout = ({ children }) => {
   }
 
   useEffect(() => {
-    function handlePageLoad() {
-      setShowPreView(true);
-      console.log('asd');
-    }
-
-    window.addEventListener('load', handlePageLoad);
-
-    return () => {
-      window.removeEventListener('load', handlePageLoad);
-    };
+    setShowPreView(true);
   }, []);
 
   useEffect(() => {
-    // setShowPreView(true);
     const preViewTimer = setTimeout(() => {
       setShowPreView(false);
     }, 4000);
