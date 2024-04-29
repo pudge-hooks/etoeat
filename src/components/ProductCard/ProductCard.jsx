@@ -51,6 +51,7 @@ const ProductCard = ({ product }) => {
               autoPlay
               loop
               muted
+              playsInline
               className={`products__image ${isFlipped ? '' : 'show'}`}
             >
               <source src={productsMedia[product.ID].video} type="video/mp4" />
